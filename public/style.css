@@ -1,0 +1,40 @@
+ body {
+	 background: #f8f8f8;
+	 background: url('images/tiles-01.png');
+	 font-family: 'montserrat',arial;
+	 text-align: center;
+	 margin-top: 200px;
+	
+ }
+ 
+ h1 {
+	 font-size: -webkit-xxx-large;
+	 font-weight: normal;
+	 color: rgba(255, 0, 24, 0.69);
+	 margin: 8px;
+	 
+ }
+ h1.bold {
+	 font-weight: bold;
+ }
+ 
+ form {
+	 font-size: x-large;
+	 margin: 60px;
+	 
+ }
+ label {
+	 
+ }
+ input {
+	padding: 10px 159px; 
+	margin: 10px 20px;
+ }
+ button {
+	 background-color: rgba(255, 0, 24, 0.69);
+	 color: white;
+	 font-size: x-large;
+	 padding: 20px 113px;
+	 margin: 20px;
+	 
+ }
