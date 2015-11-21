@@ -14,17 +14,14 @@ class Word < ActiveRecord::Base
       add_to_list(new_array.rotate!,list)
       add_to_list(reverse_letters(new_array),list)
     end
-   
+    check_anagrams(list)
     return list
   end
 
   #turn each word array into a word and add it to thing word list
   def self.add_to_list(ary,list)
     str = ary.join('')
-    unless list.include? (str)
-      list << str
-    end
-    list
+    list << str unless list.include? (str)
   end
 
   def self.reverse_letters(arr)
@@ -35,5 +32,10 @@ class Word < ActiveRecord::Base
       new_arr[size-index-1] = letter
     end
     return new_arr
+  end
+  
+  def self.check_anagrams(list)
+
+    list.delete_if {|word| !Word.find_by_text(word).present? }
   end
 end
