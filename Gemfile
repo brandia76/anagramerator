@@ -1,13 +1,10 @@
 source 'https://rubygems.org'
-
-gem 'activerecord'
-gem 'pg'
+ruby '2.1.7'
 
 gem 'rspec'
-
+gem 'rack'
 gem 'sinatra'
 gem 'sinatra-activerecord'
-gem 'rake'
-gem 'rack'
+gem 'pg'
 gem 'rack-test'
-gem 'faker'
+gem 'puma'
