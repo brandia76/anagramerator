@@ -1,4 +1,4 @@
-module Word
+class Word < ActiveRecord::Base
  def self.find_anagrams(str)
     
     # create a list and add the initial word to it

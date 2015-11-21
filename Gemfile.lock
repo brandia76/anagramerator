@@ -28,6 +28,7 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rake (10.4.2)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -58,10 +59,12 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  activerecord
   pg
   puma
   rack
   rack-test
+  rake
   rspec
   sinatra
   sinatra-activerecord
