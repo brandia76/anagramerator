@@ -38,3 +38,11 @@
 	 margin: 20px;
 	 
  }
+ p.error {
+	 color: white;
+	 background-color: gray;
+	 font-size: small;
+	 margin: 20px 0 -40px 0;
+
+	 
+ }

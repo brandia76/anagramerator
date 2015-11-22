@@ -1,9 +1,11 @@
 <h1>Welcome To Our</h1>
 <h1 class="bold">ANAGRAM GENERATOR</h1>
-
+<% if @error.present? %>
+	<p class='error'><%= "#{@error}" %></p>
+<% end %>
 <form action="/" method="post" class="form" id="anagram">
 	<div>
-		<label for="word">Enter a word, up to 7 letters only Please!</label>
+		<label for="word">Enter a word, up to 3 letters only Please!</label>
 	</div>
 	<div>
 		<input type="text" name="word">

@@ -2,7 +2,7 @@ class Word < ActiveRecord::Base
  def self.find_anagrams(str)
     
     # create a list and add the initial word to it
-    list = [str]
+    list = [str.downcase]
 
     # take the last two letter of each word, reverse them, and add them back to the array
     list.each do |word|
@@ -35,7 +35,6 @@ class Word < ActiveRecord::Base
   end
   
   def self.check_anagrams(list)
-
     list.delete_if {|word| !Word.find_by_text(word).present? }
   end
 end

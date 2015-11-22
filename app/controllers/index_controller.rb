@@ -18,5 +18,27 @@ end
 
 post '/' do 
   @word = params[:word]
-  redirect "/anagrams/#{@word}"
+  begin
+    valid_input?(@word)  
+    redirect "/anagrams/#{@word}" 
+  rescue Exception => error 
+    @error = error.message
+    erb :index
+  end
+  
 end
+
+def three_letters?(input)
+  input.length <= 3
+end
+
+def distint_letters?(input)
+  input.chars.uniq.length >= input.length
+end
+
+def valid_input?(input)
+  unless three_letters?(input) && distint_letters?(input)
+    raise Exception.new("Please enter a 3 letter word with no repeating letters.")
+  end
+end
+
