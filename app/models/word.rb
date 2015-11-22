@@ -1,4 +1,7 @@
 class Word < ActiveRecord::Base
+
+  before_create :add_letters
+  
  def self.find_anagrams(str)
     
     # create a list and add the initial word to it
@@ -36,5 +39,9 @@ class Word < ActiveRecord::Base
   
   def self.check_anagrams(list)
     list.delete_if {|word| !Word.find_by_text(word).present? }
+  end
+  
+  def add_letters
+    self.letters = self.text.chars.sort.join
   end
 end
