@@ -43,6 +43,14 @@
 	 background-color: gray;
 	 font-size: small;
 	 margin: 20px 0 -40px 0;
-
-	 
  }
+ 
+ table {
+    width: 400px;
+    text-align: center;
+    border: 1px solid black;
+    position: relative;
+    border-collapse: separate;
+    background-color: white;
+    margin: 20px 300px;
+}
