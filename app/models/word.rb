@@ -1,6 +1,7 @@
 class Word < ActiveRecord::Base
 
   before_create :add_letters
+  validates_presence_of :text
   
  def self.find_anagrams(str)
     

@@ -1,14 +1,23 @@
 <h1>Words</h1>
+<a href="/words/new">Add a new word to the database</a>
 <table class="table table-striped">
   <thead>
     <th>Text</th>
     <th>Letters</th>
+	<th>Anagrams</th>
   </thead>
   <tbody>
     <% @words.each do |word| %>
       <tr>
-        <td><%= "#{word[:text]}" %></td>
+        <td>
+			<a href="<%= "/words/#{word[:id]}" %> ">
+				<%= "#{word[:text]}" %>
+			</a>
+		</td>
         <td><%= "#{word[:letters]}" %></td>
+		<td>
+			<a href="<%= "../anagrams/#{word[:text]}" %> ">Anagrams</a>
+		<td>
       </tr>
     <% end %>
   </tbody>

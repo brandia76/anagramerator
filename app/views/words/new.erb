@@ -1,0 +1,8 @@
+<h1>Enter new word to the anagram database:<h1>
+<% unless @errors.blank? %>
+	<p class="error"><%= "#{@errors}" %></p>
+<% end %>
+<form action="/words" method="post" class="form" id="new_word"> 
+  <input type="text" name="word" autofocus>
+  <button type="submit" class="btn" form="new_word">Add New Word!</button>
+</form>
