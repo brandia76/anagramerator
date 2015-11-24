@@ -1,5 +1,7 @@
+
 <h1><%= "#{@word[:text]}" %></h1>
 <p>Letters alphabetized: <%= "#{@word[:letters]}" %></p>
-<a href="<%= "../anagrams/#{@word[:text]}" %> ">Anagrams for <%= "#{@word[:text]}" %></a>
+<p><a href="<%= "../anagrams/#{@word[:text]}" %> ">Anagrams for <%= "#{@word[:text]}" %></a></p>
+<p><a href="<%= "../words/#{@word[:id]}/edit" %> ">Edit <%= "#{@word[:text]}" %></a></p>
 
-
+<a href="/words" class="back-link">Back to Word List</a>

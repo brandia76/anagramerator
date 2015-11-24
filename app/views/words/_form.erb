@@ -1,0 +1,13 @@
+<% unless @errors.blank? %>
+	<p class="error"><%= "#{@errors}" %></p>
+<% end %>
+
+<form action="<%= "/words/#{words_form_helper(@word)[:pass_id]}" %>" method="post" class="<%= "#{words_form_helper(@word)[:css_class]}" %>" id="<%= "#{words_form_helper(@word)[:pass_id]}-word" %>"> 
+  <input type="hidden" name="_method" value="<%= words_form_helper(@word)[:method] %>" />
+  <div>
+	<input type="text" name="text" value="<%= "#{words_form_helper(@word)[:word]}" %>" autofocus>
+  </div>
+  <div>
+	<button type="submit" class="btn" form="<%= "#{words_form_helper(@word)[:pass_id]}-word" %>"><%= words_form_helper(@word)[:button] %></button>
+  </div>	
+</form>
