@@ -13,7 +13,8 @@ end
 get '/anagrams/:word' do  
   @word = params[:word]
   alphabetized_string = @word.chars.sort.join
-  @anagrams = Word.where("letters=?", alphabetized_string) #Word.find_anagrams(@word)
+  @anagrams = Word.where("letters=?", alphabetized_string)      #Word.find_anagrams(@word)
+  @anagrams << {text: "Sorry, no knowns anagrams."} if @anagrams.size == 0
   erb :show
 end
 

@@ -1,8 +1,8 @@
 <h1>Anagrams for <%= "#{@word.chars.join}" %></h1>
 <ul>
-	<% unless @anagrams.nil? %>
-	  <% @anagrams.each do |word| %>
-		<li><%= "#{word[:text]}" %></li>
-	  <% end %>
-	<% end %>
+
+  <% @anagrams.each do |word| %>
+	<li><%= "#{word[:text]}" %></li>
+  <% end %>
+
 </ul>
